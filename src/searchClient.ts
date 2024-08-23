@@ -13,128 +13,84 @@ class SearchClient {
   async search(query, options = {}) {
     return {
       ok: true,
-          hits: [
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "284689",
-              _score: 1.0,
-              _source: {
-                id: 284689,
-                title: "Testament of Youth",
-                overview:
-                  "Testament of Youth is a powerful story of love, war and remembrance, based on the First World War memoir by Vera Brittain, which has become the classic testimony of that war from a woman’s point of view. A searing journey from youthful hopes and dreams to the edge of despair and back again, it’s a film about young love, the futility of war and how to make sense of the darkest times.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "226979",
-              _score: 1.0,
-              _source: {
-                id: 226979,
-                title: "Test",
-                overview:
-                  "San Francisco, 1985. Two opposites attract at a modern dance company. Together, their courage and resilience are tested as they navigate a world full of risks and promise, against the backdrop of a disease no one seems to know anything about.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "21259",
-              _score: 1.0,
-              _source: {
-                id: 21259,
-                title: "Testament",
-                overview:
-                  "It is just another day in the small town of Hamlin until something disastrous happens. Suddenly, news breaks that a series of nuclear warheads has been dropped along the Eastern Seaboard and, more locally, in California. As people begin coping with the devastating aftermath of the attacks — many suffer radiation poisoning — the Wetherly family tries to survive.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "880728",
-              _score: 1.0,
-              _source: {
-                id: 880728,
-                title: "The Test",
-                overview:
-                  "Annie lives in harmony with her husband Laurent and her children: the sensitive elders Maximilien and César; the younger Antoine whom Poupi, never-complaining teen, helps raising him. But a positive pregnancy test will disturb the harmony.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "401123",
-              _score: 1.0,
-              _source: {
-                id: 401123,
-                title: "Beta Test",
-                overview:
-                  "While testing the latest first person shooter from global game developer, Sentinel, video game champion Max Troy discovers the events happening within the game are being reflected in the real world. He soon determines that the game's protagonist is real-life Orson Creed, an ex-Sentinel employee who is being remotely controlled by the corporation for reasons unknown. As virtual and real worlds collide, Max and Creed must join forces to unravel the conspiracy before the game's sinister events escalate and overwhelm the city.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "12206",
-              _score: 1.0,
-              _source: {
-                id: 12206,
-                title: "The Testament of Dr. Mabuse",
-                overview:
-                  "After a detective is assaulted by thugs and placed in an asylum run by Professor Baum, he observes the professor's preoccupation with another patient, the criminal genius Dr. Mabuse the hypnotist. When Mabuse's notes are found to be connected with a rash of recent crimes, Commissioner Lohmann must determine how Mabuse is communicating with the criminals, despite conflicting reports on the doctor's whereabouts, and capture him for good.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "749645",
-              _score: 1.0,
-              _source: {
-                id: 749645,
-                title: "The Beta Test",
-                overview:
-                  "An engaged Hollywood agent receives a mysterious letter for an anonymous sexual encounter and becomes ensnared in a sinister world of lying, infidelity, and digital data.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "330764",
-              _score: 1.0,
-              _source: {
-                id: 330764,
-                title: "The Brand New Testament",
-                overview:
-                  "God lives in Brussels. On Earth though, God is a coward, with pathetical morals and being odious with his family. His daughter, Ea, is bored at home and can't stand being locked up in a small apartment in ordinary Brussels, until the day she decides to revolt against her dad...",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "17445",
-              _score: 1.0,
-              _source: {
-                id: 17445,
-                title: "Green Lantern: First Flight",
-                overview:
-                  "Test pilot Hal Jordan finds himself recruited as the newest member of the intergalactic police force, The Green Lantern Corps.",
-              },
-            },
-            {
-              _index: "docs-v1",
-              _type: "_doc",
-              _id: "2614",
-              _score: 1.0,
-              _source: {
-                id: 2614,
-                title: "Innerspace",
-                overview:
-                  "Test pilot Tuck Pendleton volunteers to test a special vessel for a miniaturization experiment. Accidentally injected into a neurotic hypochondriac, Jack Putter, Tuck must convince Jack to find his ex-girlfriend, Lydia Maxwell, to help him extract Tuck and his ship and re-enlarge them before his oxygen runs out.",
-              },
-            },
-          ]
+      hits: [
+        {
+            "hierarchy_radio_lvl0": null,
+            "hierarchy_radio_lvl1": null,
+            "hierarchy_radio_lvl2": null,
+            "hierarchy_radio_lvl3": "Opening Devtools Programmatically ​",
+            "hierarchy_radio_lvl4": null,
+            "hierarchy_radio_lvl5": null,
+            "hierarchy_lvl0": "Documentation",
+            "hierarchy_lvl1": "Application Debugging",
+            "hierarchy_lvl2": "WebView Console ​",
+            "hierarchy_lvl3": "Opening Devtools Programmatically ​",
+            "hierarchy_lvl4": null,
+            "hierarchy_lvl5": null,
+            "hierarchy_lvl6": null,
+            "content": null,
+            "objectID": "9ea8da8630fcce924271dac8e48f43782791a238",
+            "anchor": "opening-devtools-programmatically",
+            "url": "https://tauri.app/it/v1/guides/debugging/application/#opening-devtools-programmatically",
+            "_formatted": {
+                "hierarchy_radio_lvl0": null,
+                "hierarchy_radio_lvl1": null,
+                "hierarchy_radio_lvl2": null,
+                "hierarchy_radio_lvl3": "<em>Openin</em>g Devtools Programmatically ​",
+                "hierarchy_radio_lvl4": null,
+                "hierarchy_radio_lvl5": null,
+                "hierarchy_lvl0": "Documentation",
+                "hierarchy_lvl1": "Application Debugging",
+                "hierarchy_lvl2": "WebView Console ​",
+                "hierarchy_lvl3": "<em>Openin</em>g Devtools Programmatically ​",
+                "hierarchy_lvl4": null,
+                "hierarchy_lvl5": null,
+                "hierarchy_lvl6": null,
+                "content": null,
+                "objectID": "9ea8da8630fcce924271dac8e48f43782791a238",
+                "anchor": "<em>openin</em>g-devtools-programmatically",
+                "url": "https://tauri.app/it/v1/guides/debugging/application/#<em>openin</em>g-devtools-programmatically"
+            }
+        },
+        {
+            "hierarchy_radio_lvl0": null,
+            "hierarchy_radio_lvl1": null,
+            "hierarchy_radio_lvl2": null,
+            "hierarchy_radio_lvl3": null,
+            "hierarchy_radio_lvl4": null,
+            "hierarchy_radio_lvl5": "directory ​",
+            "hierarchy_lvl0": "JS API",
+            "hierarchy_lvl1": "dialog",
+            "hierarchy_lvl2": "Interfaces ​",
+            "hierarchy_lvl3": "OpenDialogOptions ​",
+            "hierarchy_lvl4": "Properties ​",
+            "hierarchy_lvl5": "directory ​",
+            "hierarchy_lvl6": null,
+            "content": null,
+            "objectID": "5beb749fb42cbe2d46ed744a2d748cf5120e21f2",
+            "anchor": "directory",
+            "url": "https://tauri.app/v1/api/js/dialog/#directory",
+            "_formatted": {
+                "hierarchy_radio_lvl0": null,
+                "hierarchy_radio_lvl1": null,
+                "hierarchy_radio_lvl2": null,
+                "hierarchy_radio_lvl3": null,
+                "hierarchy_radio_lvl4": null,
+                "hierarchy_radio_lvl5": "directory ​",
+                "hierarchy_lvl0": "JS API",
+                "hierarchy_lvl1": "dialog",
+                "hierarchy_lvl2": "Interfaces ​",
+                "hierarchy_lvl3": "<em>OpenDi</em>alogOptions ​",
+                "hierarchy_lvl4": "Properties ​",
+                "hierarchy_lvl5": "directory ​",
+                "hierarchy_lvl6": null,
+                "content": null,
+                "objectID": "5beb749fb42cbe2d46ed744a2d748cf5120e21f2",
+                "anchor": "directory",
+                "url": "https://tauri.app/v1/api/js/dialog/#directory"
+            }
+        }
+    ]
     };
   }
 
