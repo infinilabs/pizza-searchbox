@@ -1,0 +1,63 @@
+{
+  "name": "infini-docsearch",
+  "version": "0.1.0",
+  "description": "A quick search component for pizza/easysearch, inspired by algolia/docsearch.",
+  "license": "MIT or Apache-2.0",
+  "files": [
+    "dist",
+    "LICENSE_*"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./solid": {
+      "types": "./dist/index.solid.d.ts",
+      "import": "./dist/index.solid.jsx",
+      "require": "./dist/index.solid.jsx",
+      "default": "./dist/index.solid.jsx"
+    },
+    "./css": "./dist/index.css",
+    "./css/variables": "./dist/variables.css",
+    "./css/button": "./dist/button.css",
+    "./css/modal": "./dist/modal.css"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "ts:check": "tsc --noEmit",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "solid-js": "1.8.17"
+  },
+  "devDependencies": {
+    "covector": "0.11.0",
+    "esbuild": "0.21.5",
+    "esbuild-plugin-solid": "0.6.0",
+    "prettier": "3.3.2",
+    "tsup": "8.1.0",
+    "typescript": "5.5.2"
+  },
+  "resolutions": {
+    "semver": ">=7.5.2"
+  },
+  "keywords": [
+    "pizza",
+    "easysearch",
+    "search",
+    "docsearch",
+    "autocomplete",
+    "docs",
+    "quicksearch",
+    "quicksearchbar"
+  ]
+}
