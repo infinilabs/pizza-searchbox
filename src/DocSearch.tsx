@@ -8,10 +8,10 @@ import { DocSearchModal, ModalTranslations } from "./DocSearchModal";
 import { Portal } from "solid-js/web";
 
 export interface DocSearchProps {
-  host: string;
-  username: string;
-  password: string;
-  indexUid: string;
+  // host: string;
+  // username: string;
+  // password: string;
+  // indexUid: string;
   clientAgents?: string[];
   /**
    * An array of hotkeys to trigger the search modal.

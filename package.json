@@ -37,9 +37,12 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
   },
   "dependencies": {
-    "solid-js": "1.8.17"
+    "mocha": "^10.7.3",
+    "solid-js": "1.8.17",
+    "pizza-wasm": "file:../wasm/pkg"
   },
   "devDependencies": {
+    "pizza-wasm": "file:../wasm/pkg",
     "covector": "0.11.0",
     "esbuild": "0.21.5",
     "esbuild-plugin-solid": "0.6.0",

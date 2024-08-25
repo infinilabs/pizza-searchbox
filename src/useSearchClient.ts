@@ -1,24 +1,24 @@
-import { SearchClient } from "./searchClient";
+import { PizzaWasm } from "./PizzaWasm";
 import { Accessor, createMemo } from "solid-js";
 import version from "./version";
 
 export function useSearchClient({
-  host,
-  username,
-  password,
+  // host,
+  // username,
+  // password,
   clientAgents = [],
 }: {
-  host: string;
-  username: string;
-  password: string;
+  // host: string;
+  // username: string;
+  // password: string;
   clientAgents?: string[];
-}): Accessor<SearchClient> {
+}): Accessor<PizzaWasm> {
   return createMemo(
     () =>
-      new SearchClient({
-        host,
-        username,
-        password,
+      new PizzaWasm({
+        // host,
+        // username,
+        // password,
         clientAgents: clientAgents.concat(
           `infini docs-searchbar.js (v${version}`,
         ),

@@ -56,10 +56,10 @@ enum ScreenState {
 }
 
 export const DocSearchModal: Component<DocSearchModalProps> = ({
-  host,
-  username,
-  password,
-  indexUid,
+  // host,
+  // username,
+  // password,
+  // indexUid,
   clientAgents,
   environment = window,
   translations = {},
@@ -89,7 +89,8 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   });
   onCleanup(() => window.removeEventListener("resize", setFullViewportHeight));
 
-  const searchClient = useSearchClient({ host, username, password, clientAgents });
+  const searchClient = useSearchClient({ clientAgents });
+  // const searchClient = useSearchClient({ host, username, password, clientAgents });
   const [loading, setLoading] = createSignal(false);
   const [query, setQuery] = createSignal("");
   const [activeItemIndex, setActiveItemIndex] = createSignal(0);
@@ -165,7 +166,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   function search(query: string) {
     setLoading(true);
     searchClient()
-      .index(indexUid)
+      // .index(indexUid)
       .search(query, {
         attributesToHighlight: ["*"],
         attributesToCrop: [`content`],

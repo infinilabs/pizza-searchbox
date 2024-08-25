@@ -2,7 +2,6 @@ import { Component } from "solid-js";
 import { DownIcon } from "./icons/Down";
 import { EnterIcon } from "./icons/Enter";
 import { EscIcon } from "./icons/Esc";
-import { InfiniDarkIcon } from "./icons/InfinisearchDark";
 import { InfiniLightIcon } from "./icons/InfinisearchLight";
 import { UpIcon } from "./icons/Up";
 
