@@ -1,23 +1,23 @@
-# infini-docsearch
+# pizza-docsearch
 
-A quick search component for pizza/easyserach, inspired by algolia/docsearch.
+A quick search component for pizza, inspired by algolia/docsearch.
 
 # Screenshots
 
 | light                                                                                              | dark                                                                                             |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| ![light](https://github.com/tauri-apps/infini-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/infini-docsearch/raw/dev/.github/screenshot-dark.png) |
+| ![light](https://github.com/tauri-apps/pizza-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/pizza-docsearch/raw/dev/.github/screenshot-dark.png) |
 
 # Usage through NPM (Recommended)
 
 ### Installation
 
 ```sh
-yarn add infini-docsearch
+yarn add pizza-docsearch
 # or
-npm install infini-docsearch
+npm install pizza-docsearch
 # or
-pnpm add infini-docsearch
+pnpm add pizza-docsearch
 ```
 
 ### Javascript
@@ -33,8 +33,8 @@ Then, insert `DocSearch` into it by calling the `docsearch` function and providi
 Make sure to provide a `container` (for example, a `div`), not an `input`. `DocSearch` generates a fully accessible search box for you.
 
 ```js
-import { docsearch } from "infini-docsearch";
-import "infini-docsearch/css";
+import { docsearch } from "pizza-docsearch";
+import "pizza-docsearch/css";
 
 docsearch({
   container: "#docsearch",
@@ -51,17 +51,17 @@ All styles are included in the package as:
 
 - One big file:
   - ```js
-    import "infini-docsearch/css";
+    import "pizza-docsearch/css";
     ```
 - Individual small files:
   - ```js
-    import "infini-docsearch/css/variables";
+    import "pizza-docsearch/css/variables";
     ```
   - ```js
-    import "infini-docsearch/css/button";
+    import "pizza-docsearch/css/button";
     ```
   - ```js
-    import "infini-docsearch/css/modal";
+    import "pizza-docsearch/css/modal";
     ```
 
 ## SolidJS
@@ -69,8 +69,8 @@ All styles are included in the package as:
 If you are using `solid-js`, you can import `DocSearch` component directely which generates a fully accessible search box for you.
 
 ```js
-import { DocSearch } from "infini-docsearch/solid";
-import "infini-docsearch/css";
+import { DocSearch } from "pizza-docsearch/solid";
+import "pizza-docsearch/css";
 
 function App() {
   return (
@@ -99,7 +99,7 @@ The package also contains a browser bundle and the necessary styles that could b
 2. import the js borwser bundle and initialize the component
 
    ```html
-   <script src="https://unpkg.com/infini-docsearch@latest/dist/index.global.js"></script>
+   <script src="https://unpkg.com/pizza-docsearch@latest/dist/index.global.js"></script>
    <script>
      const { docsearch } = window.__docsearch_infini__;
      docsearch({
@@ -117,7 +117,7 @@ The package also contains a browser bundle and the necessary styles that could b
    ```html
    <link
      rel="stylesheet"
-     href="https://unpkg.com/infini-docsearch@latest/dist/index.css"
+     href="https://unpkg.com/pizza-docsearch@latest/dist/index.css"
    />
    ```
 

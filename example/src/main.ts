@@ -1,5 +1,5 @@
-import { docsearch } from "infini-docsearch";
-import "infini-docsearch/css";
+import { docsearch } from "pizza-docsearch";
+import "pizza-docsearch/css";
 
 docsearch({
   host: "http://127.0.0.1:9200",

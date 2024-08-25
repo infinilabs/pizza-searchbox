@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "infini-docsearch": "workspace:"
+    "pizza-docsearch": "../"
   },
   "devDependencies": {
     "typescript": "5.5.2",

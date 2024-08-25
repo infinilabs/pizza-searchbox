@@ -64,7 +64,6 @@ export const DocSearchModalFooter: Component<{
         <span class="docsearch-modal-footer-logo-label">{poweredByText}</span>
         <a href="https://www.infinilabs.com/">
           <InfiniLightIcon class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-light" />
-          <InfiniDarkIcon class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-dark" />
         </a>
       </span>
     </>
