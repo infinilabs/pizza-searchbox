@@ -42,13 +42,14 @@
     "pizza-wasm": "file:../wasm/pkg"
   },
   "devDependencies": {
-    "pizza-wasm": "file:../wasm/pkg",
+    "@types/node": "^22.5.0",
     "covector": "0.11.0",
     "esbuild": "0.21.5",
     "esbuild-plugin-solid": "0.6.0",
+    "pizza-wasm": "file:../wasm/pkg",
     "prettier": "3.3.2",
     "tsup": "8.1.0",
-    "typescript": "5.5.2"
+    "typescript": "^5.5.2"
   },
   "resolutions": {
     "semver": ">=7.5.2"

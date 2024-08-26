@@ -48,6 +48,37 @@ type FormattedHit = {
   url: string | null;
 };
 
+export function convertHitsToFormattedHits(
+  hits: any[],
+): [FormattedHit[], string[]] {
+  if (!hits || hits.length === 0) {
+    return [[], []];
+  }
+
+  const formattedHits: FormattedHit[] = [];
+  const categories: Set<string> = new Set();
+
+  hits.forEach((hit, index) => {
+    const source = hit._source || {};
+
+    const formattedHit: FormattedHit = {
+      index,
+      category: source.category || "category",
+      subcategory: source.subcategory || "",
+      title: source.title || "",
+      text: source.text || "",
+      url: source.url || "",
+    };
+
+    formattedHits.push(formattedHit);
+    if (formattedHit.category) {
+      categories.add(formattedHit.category);
+    }
+  });
+
+  return [formattedHits, Array.from(categories)];
+}
+
 enum ScreenState {
   Results = 0,
   NoResults,
@@ -90,7 +121,6 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   onCleanup(() => window.removeEventListener("resize", setFullViewportHeight));
 
   const searchClient = useSearchClient({ clientAgents });
-  // const searchClient = useSearchClient({ host, username, password, clientAgents });
   const [loading, setLoading] = createSignal(false);
   const [query, setQuery] = createSignal("");
   const [activeItemIndex, setActiveItemIndex] = createSignal(0);
@@ -184,20 +214,25 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
           return;
         }
 
-        if (res.hits.length === 0) {
+        if (!res.hits || res.hits.length === 0) {
           onReset();
           setScreenState(ScreenState.NoResults);
           return;
         }
 
-        const [hits, catgeories] = formatHits(res.hits);
+        const [hits, categories] = convertHitsToFormattedHits(res.hits);
+        // const [hits, catgeories] = formatHits(res.hits);
+
+        console.log(hits);
+        console.log(categories);
+
         setLoading(false);
         setScreenState(
           hits.length === 0 ? ScreenState.NoResults : ScreenState.Results,
         );
         setActiveItemIndex(0);
         setHits(hits);
-        setHitsCategories(catgeories);
+        setHitsCategories(categories);
       });
   }
   const debouncedSearch = utils.debounce(search, 100);

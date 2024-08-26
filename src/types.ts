@@ -3,4 +3,3 @@ export type Hit<T = Record<string, any>> = T & {
   _formatted?: Partial<T>;
   _rankingScore?: number;
 };
-

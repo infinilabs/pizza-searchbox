@@ -382,7 +382,7 @@
   align-items: center;
   color: var(--docsearch-muted-color);
   a {
-    text-decoration:none;
+    text-decoration: none;
     display: flex;
     align-items: center;
   }

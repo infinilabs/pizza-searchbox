@@ -3,25 +3,24 @@ import { Accessor, createMemo } from "solid-js";
 import version from "./version";
 
 export function useSearchClient({
-  // host,
-  // username,
-  // password,
   clientAgents = [],
 }: {
-  // host: string;
-  // username: string;
-  // password: string;
   clientAgents?: string[];
 }): Accessor<PizzaWasm> {
-  return createMemo(
-    () =>
-      new PizzaWasm({
-        // host,
-        // username,
-        // password,
-        clientAgents: clientAgents.concat(
-          `infini docs-searchbar.js (v${version}`,
-        ),
-      }),
-  );
+  const pizzaWasm = new PizzaWasm({
+    clientAgents: clientAgents.concat(`infini docs-searchbar.js (v${version})`),
+  });
+
+  // Load the file asynchronously
+  pizzaWasm
+    .load("recipe_names.csv")
+    .then(() => {
+      console.log("recipe_names.csv loaded and indexed successfully.");
+    })
+    .catch((error) => {
+      console.error("Failed to load recipe_names.csv:", error);
+    });
+
+  // Return a reactive accessor using createMemo
+  return createMemo(() => pizzaWasm);
 }
