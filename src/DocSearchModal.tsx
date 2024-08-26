@@ -44,7 +44,7 @@ type FormattedHit = {
   category: string | null;
   subcategory: string | null;
   title: string | null;
-  text: string | null;
+  content: string | null;
   url: string | null;
 };
 
@@ -63,11 +63,11 @@ export function convertHitsToFormattedHits(
 
     const formattedHit: FormattedHit = {
       index,
-      category: source.category || "category",
+      category: source.category || "",
       subcategory: source.subcategory || "",
-      title: source.title || "",
-      text: source.text || "",
-      url: source.url || "",
+      title: source.title || null,
+      content: source.content || null,
+      url: source.url || null,
     };
 
     formattedHits.push(formattedHit);
@@ -223,8 +223,8 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         const [hits, categories] = convertHitsToFormattedHits(res.hits);
         // const [hits, catgeories] = formatHits(res.hits);
 
-        console.log(hits);
-        console.log(categories);
+        // console.log("Hits:", hits);
+        // console.log("Categories:", categories);
 
         setLoading(false);
         setScreenState(
@@ -360,7 +360,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
                                 ></p>
                                 <p
                                   class="docsearch-modal-search-hits-item-text"
-                                  innerHTML={hit.text || ""}
+                                  innerHTML={hit.content || ""}
                                 ></p>
                               </span>
                               <span
@@ -418,7 +418,7 @@ function formatHits(
             utils.getHighlightedValue(hit, "lvl6"),
           ])
           .join('<span aria-hidden="true"> › </span>'),
-        text: utils.getSnippetedValue(hit, "content"),
+        content: utils.getSnippetedValue(hit, "content"),
         url: formatURL(hit),
       })),
     )

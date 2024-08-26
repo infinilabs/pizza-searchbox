@@ -1,15 +1,13 @@
 import { Component } from "solid-js";
 
-export const InfiniLightIcon: Component<{ class?: string }> = (props) => {
+export const PizzaLight: Component<{ class?: string }> = (props) => {
   return (
-    <svg
-      id="_图层_2"
-      data-name="图层 2"
+    <svg class={props.class}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 216 60"
       height={26}
     >
-      <g id="_图层_1-2" data-name="图层 1">
+      <g data-name="layer">
         <g>
           <path fill="#2d2d2d" d="M52.43,17.22h3.75v21.62h-3.75V17.22Z" />
           <path

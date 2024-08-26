@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     target: "esnext",
     rollupOptions: {
-      input: "src/main.ts",
+      // input: "src/main.ts",
     },
   },
 });

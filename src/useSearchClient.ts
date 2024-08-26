@@ -13,12 +13,12 @@ export function useSearchClient({
 
   // Load the file asynchronously
   pizzaWasm
-    .load("recipe_names.csv")
+    .load("/index.json")
     .then(() => {
-      console.log("recipe_names.csv loaded and indexed successfully.");
+      console.log("Index loaded and indexed successfully.");
     })
     .catch((error) => {
-      console.error("Failed to load recipe_names.csv:", error);
+      console.error("Failed to load index:", error);
     });
 
   // Return a reactive accessor using createMemo

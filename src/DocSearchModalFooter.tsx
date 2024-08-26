@@ -2,7 +2,8 @@ import { Component } from "solid-js";
 import { DownIcon } from "./icons/Down";
 import { EnterIcon } from "./icons/Enter";
 import { EscIcon } from "./icons/Esc";
-import { InfiniLightIcon } from "./icons/InfinisearchLight";
+import { PizzaLight } from "./icons/PizzaLight";
+import { PizzaDark } from "./icons/PizzaDark";
 import { UpIcon } from "./icons/Up";
 
 export type FooterTranslations = Partial<{
@@ -62,7 +63,8 @@ export const DocSearchModalFooter: Component<{
       <span class="docsearch-modal-footer-logo">
         <span class="docsearch-modal-footer-logo-label">{poweredByText}</span>
         <a href="https://www.infinilabs.com/">
-          <InfiniLightIcon class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-light" />
+          <PizzaDark class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-dark" />
+          <PizzaLight class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-light" />
         </a>
       </span>
     </>

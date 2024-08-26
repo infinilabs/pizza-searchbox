@@ -5,7 +5,7 @@ import { convertHitsToFormattedHits } from "./DocSearchModal";
 class PizzaWasm {
   private pizzaEngine: Pizza;
   constructor({}) {
-    console.log("new pizza");
+    console.log("Init Pizza Engine.");
     this.pizzaEngine = Pizza.new();
   }
 
@@ -23,11 +23,14 @@ class PizzaWasm {
       // Read the file content as text
       const fileContent = await response.text();
 
+
+      //TODO, process fileContent to each object, and send to this.pizzaEngine.load
+
       // Load and index the file content using the Wasm engine
-      const isLoaded = this.pizzaEngine.load(fileContent);
+      const isLoaded = this.pizzaEngine.load_json_objects_array(fileContent);
 
       if (isLoaded) {
-        console.log(`${url} loaded and indexed successfully.`);
+        console.log(`Load ${url} and indexed successfully.`);
       } else {
         console.error(`Failed to load ${url}`);
       }
@@ -42,7 +45,7 @@ class PizzaWasm {
   // }
 
   async search(query: string, options = {}) {
-    console.log(query);
+    // console.log("Query: ",query);
 
     // Use the Wasm pizzaEngine to perform the search
     const searchResultsJsValue = this.pizzaEngine.search_by_query_string(query);
