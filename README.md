@@ -2,6 +2,11 @@
 
 A quick search UI component for pizza, forked from [here](https://github.com/tauri-apps/meilisearch-docsearch).
 
+
+# Screenshot
+
+![light](https://github.com/infinilabs/pizza-docsearch/blob/main/example/screenshot-2024-08-28-20.24.19.gif?raw=true)
+
 # Usage through NPM (Recommended)
 
 Checkout the `example` for more details about how to use pizza-search.
