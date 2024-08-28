@@ -60,7 +60,6 @@ import "pizza-docsearch/css";
 function App() {
   return (
     <DocSearch
-      host="YOUR_HOST_URL",
     />
   );
 }
