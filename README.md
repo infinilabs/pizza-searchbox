@@ -42,20 +42,12 @@ docsearch({
 
 All styles are included in the package as:
 
-- One big file:
-  - ```js
-    import "pizza-docsearch/css";
-    ```
+- One big file:`import "pizza-docsearch/css";`
+
 - Individual small files:
-  - ```js
-    import "pizza-docsearch/css/variables";
-    ```
-  - ```js
-    import "pizza-docsearch/css/button";
-    ```
-  - ```js
-    import "pizza-docsearch/css/modal";
-    ```
+  - `import "pizza-docsearch/css/variables";`
+  - `import "pizza-docsearch/css/button";`
+  - `import "pizza-docsearch/css/modal";`
 
 ## SolidJS
 
@@ -109,7 +101,7 @@ The package also contains a browser bundle and the necessary styles that could b
 
 # Acknowledgement
 
-This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`algolia/docs-searchbar.js`](https://github.com/algolia/docs-searchbar.js/)
+This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`meilisearch/docs-searchbar`](https://github.com/meilisearch/docs-searchbar.js/)
 
 # LICENSE
 
