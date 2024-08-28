@@ -1,4 +1,5 @@
 import {
+  Accessor,
   Component,
   createSignal,
   For,
@@ -6,7 +7,7 @@ import {
   onCleanup,
   onMount,
   Show,
-  Switch,
+  Switch
 } from "solid-js";
 import { Hits, Hit } from "./types";
 import { DocSearchProps } from "./DocSearch";
@@ -19,7 +20,6 @@ import {
   SearchBoxTranslations,
 } from "./DocSearchModalSearchBox";
 import { EnterIcon } from "./icons/Enter";
-import { useSearchClient } from "./useSearchClient";
 import trapFocus from "./useTrapFocus";
 import * as utils from "./utils";
 
@@ -37,6 +37,7 @@ export type DocSearchModalProps = DocSearchProps & {
   translations?: ModalTranslations;
   onClose?: () => void;
   initialQuery?: string;
+  searchClient?: () => any;
 };
 
 type FormattedHit = {
@@ -63,7 +64,7 @@ export function convertHitsToFormattedHits(
 
     const formattedHit: FormattedHit = {
       index,
-      category: source.category || "",
+      category: source.category || "General",
       subcategory: source.subcategory || "",
       title: source.title || null,
       content: source.content || null,
@@ -91,7 +92,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   // username,
   // password,
   // indexUid,
-  clientAgents,
+  searchClient,
   environment = window,
   translations = {},
   onClose,
@@ -120,7 +121,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   });
   onCleanup(() => window.removeEventListener("resize", setFullViewportHeight));
 
-  const searchClient = useSearchClient({ clientAgents });
+  // const searchClient = useSearchClient({ clientAgents });
   const [loading, setLoading] = createSignal(false);
   const [query, setQuery] = createSignal("");
   const [activeItemIndex, setActiveItemIndex] = createSignal(0);
@@ -195,7 +196,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
 
   function search(query: string) {
     setLoading(true);
-    searchClient()
+    searchClient && searchClient()
       // .index(indexUid)
       .search(query, {
         attributesToHighlight: ["*"],

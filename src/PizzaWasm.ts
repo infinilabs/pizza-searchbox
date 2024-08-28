@@ -47,8 +47,24 @@ class PizzaWasm {
   async search(query: string, options = {}) {
     // console.log("Query: ",query);
 
+    // var dsl={
+    //   "query": {
+    //     "bool": {
+    //       "should": [
+    //         {
+    //           "match": {
+    //             "*": "pizza"
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   }
+    // };
+
     // Use the Wasm pizzaEngine to perform the search
+    // const searchResultsJsValue = this.pizzaEngine.search_by_query_dsl(JSON.stringify(dsl));
     const searchResultsJsValue = this.pizzaEngine.search_by_query_string(query);
+    return searchResultsJsValue
 
     // Convert JsValue to a JavaScript object
     const searchResults =

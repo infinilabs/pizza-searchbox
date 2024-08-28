@@ -15,11 +15,13 @@ export interface DocSearchOptions extends DocSearchProps {
 export function docsearch(props: DocSearchOptions): () => void {
   const [render_, setRender] = createSignal(true);
   render(
-    () => (
-      <Show when={render_()}>
-        <DocSearch {...props} />
-      </Show>
-    ),
+    () => {
+      return (
+        <Show when={render_()}>
+               <DocSearch {...props} />
+        </Show>
+      )
+    },
     typeof props.container === "string"
       ? (props.environment ?? window).document.querySelector<HTMLElement>(
           props.container,

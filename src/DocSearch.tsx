@@ -6,6 +6,7 @@ import {
 } from "./useDocSearchHotKeys";
 import { DocSearchModal, ModalTranslations } from "./DocSearchModal";
 import { Portal } from "solid-js/web";
+import { useSearchClient } from "./useSearchClient";
 
 export interface DocSearchProps {
   // host: string;
@@ -48,6 +49,7 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
     if (selectedText) setInitialQuery(selectedText.toString());
     setIsOpen(true);
   };
+  const searchClient = useSearchClient({ clientAgents:[] });
 
   useHotKeys({
     isOpen,
@@ -68,6 +70,7 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
         <Portal mount={environment.document.body}>
           <DocSearchModal
             {...props}
+            searchClient={searchClient}
             initialQuery={initialQuery()}
             onClose={onClose}
             translations={props?.translations?.modal}
