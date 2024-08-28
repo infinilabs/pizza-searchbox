@@ -1,14 +1,11 @@
 # pizza-docsearch
 
-A quick search component for pizza, inspired by algolia/docsearch.
-
-# Screenshots
-
-| light                                                                                              | dark                                                                                             |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| ![light](https://github.com/tauri-apps/pizza-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/pizza-docsearch/raw/dev/.github/screenshot-dark.png) |
+A quick search UI component for pizza, forked from [here](https://github.com/tauri-apps/meilisearch-docsearch).
 
 # Usage through NPM (Recommended)
+
+Checkout the `example` for more details about how to use pizza-search.
+
 
 ### Installation
 
@@ -38,10 +35,6 @@ import "pizza-docsearch/css";
 
 docsearch({
   container: "#docsearch",
-  host: "YOUR_HOST_URL",
-  username: "YOUR_SEARCH_USERNAME",
-  password: "YOUR_SEARCH_PASSWORD",
-  indexUid: "YOUR_INDEX_UID",
 });
 ```
 
@@ -76,9 +69,6 @@ function App() {
   return (
     <DocSearch
       host="YOUR_HOST_URL",
-      username="YOUR_SEARCH_USERNAME",
-      password="YOUR_SEARCH_PASSWORD",
-      indexUid="YOUR_INDEX_UID"
     />
   );
 }
@@ -104,10 +94,6 @@ The package also contains a browser bundle and the necessary styles that could b
      const { docsearch } = window.__docsearch_infini__;
      docsearch({
        container: "#docsearch",
-       host: "YOUR_HOST_URL",
-       username: "YOUR_SEARCH_USERNAME",
-       password: "YOUR_SEARCH_PASSWORD",
-       indexUid: "YOUR_INDEX_UID",
      });
    </script>
    ```
@@ -123,7 +109,7 @@ The package also contains a browser bundle and the necessary styles that could b
 
 # Acknowledgement
 
-This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`infini/docs-searchbar.js`](https://github.com/infini/docs-searchbar.js/)
+This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`algolia/docs-searchbar.js`](https://github.com/algolia/docs-searchbar.js/)
 
 # LICENSE
 
