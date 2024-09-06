@@ -2,6 +2,8 @@
 
 A quick search UI component for pizza, forked from [here](https://github.com/tauri-apps/meilisearch-docsearch).
 
+Pizza-docsearch is part of the [Pizza](https://github.com/infinilabs/pizza) search engine project, visit [Pizza's site](http://pizza.rs) for more details.
+
 # Screenshot
 
 ![light](https://github.com/infinilabs/pizza-docsearch/blob/main/example/screenshot-2024-08-28-20.24.19.gif?raw=true)
