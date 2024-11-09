@@ -46,7 +46,8 @@ class PizzaWasm {
   async search(query: string, options = {}) {
 
     // Use the Wasm pizzaEngine to perform the search
-    const searchResultsJsValue = this.pizzaEngine.search_by_query_string_with_default_operator(query, this?.props?.default_operator ?? "OR");
+    const searchResultsJsValue = this.pizzaEngine.advanced_search_by_query_string(this?.props?.default_field??"*",
+      query, this?.props?.default_operator ?? "OR", 0, this?.props?.number_of_results ?? 10, false);
     return searchResultsJsValue;
   }
 }

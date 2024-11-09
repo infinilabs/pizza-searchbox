@@ -29,6 +29,7 @@ type ModalTranslations = Partial<{
 }> & FooterTranslations & SearchBoxTranslations;
 
 interface DocSearchProps {
+    default_field: string;
     number_of_results?: number;
     default_operator?: string;
     clientAgents?: string[];

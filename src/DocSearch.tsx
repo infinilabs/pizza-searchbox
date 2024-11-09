@@ -9,12 +9,11 @@ import { Portal } from "solid-js/web";
 import { useSearchClient } from "./useSearchClient";
 
 export interface DocSearchProps {
-  // host: string;
-  // username: string;
-  // password: string;
-  // indexUid: string;
+  
+  default_field: string;
   number_of_results?: number;
   default_operator?: string;
+  
   clientAgents?: string[];
   /**
    * An array of hotkeys to trigger the search modal.
