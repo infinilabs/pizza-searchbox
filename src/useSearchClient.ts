@@ -1,15 +1,16 @@
 import { PizzaWasm } from "./PizzaWasm";
 import { Accessor, createMemo } from "solid-js";
 import version from "./version";
+import { DocSearchProps } from "./DocSearch";
 
 export function useSearchClient({
-  clientAgents = [],
-}: {
+                                  clientAgents = []
+                                }: {
   clientAgents?: string[];
-}): Accessor<PizzaWasm> {
+}, props: DocSearchProps): Accessor<PizzaWasm> {
   const pizzaWasm = new PizzaWasm({
-    clientAgents: clientAgents.concat(`infini docs-searchbar.js (v${version})`),
-  });
+    clientAgents: clientAgents.concat(`infini docs-searchbar.js (v${version})`)
+  }, props);
 
   // Load the file asynchronously
   pizzaWasm

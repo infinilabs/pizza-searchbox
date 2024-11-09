@@ -5,6 +5,8 @@ import { DocSearch, type DocSearchProps } from "./DocSearch";
 export interface DocSearchOptions extends DocSearchProps {
   /* Container in which the search button will be added to. */
   container: HTMLElement | string;
+  number_of_results?: number;
+  default_operator?: string;
 }
 
 /**

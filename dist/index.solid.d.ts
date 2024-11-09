@@ -59,6 +59,8 @@ declare function convertHitsToFormattedHits(hits: any[]): [FormattedHit[], strin
 declare const DocSearchModal: Component<DocSearchModalProps>;
 
 interface DocSearchProps {
+    number_of_results?: number;
+    default_operator?: string;
     clientAgents?: string[];
     /**
      * An array of hotkeys to trigger the search modal.

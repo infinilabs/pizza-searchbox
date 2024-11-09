@@ -62,7 +62,7 @@ export const DocSearchModalFooter: Component<{
       </span>
       <span class="docsearch-modal-footer-logo">
         <span class="docsearch-modal-footer-logo-label">{poweredByText}</span>
-        <a href="https://www.infinilabs.com/">
+        <a href="https://pizza.rs/">
           <PizzaDark class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-dark" />
           <PizzaLight class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-light" />
         </a>

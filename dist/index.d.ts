@@ -29,6 +29,8 @@ type ModalTranslations = Partial<{
 }> & FooterTranslations & SearchBoxTranslations;
 
 interface DocSearchProps {
+    number_of_results?: number;
+    default_operator?: string;
     clientAgents?: string[];
     /**
      * An array of hotkeys to trigger the search modal.
@@ -50,6 +52,8 @@ type DocSearchTranslations = Partial<{
 
 interface DocSearchOptions extends DocSearchProps {
     container: HTMLElement | string;
+    number_of_results?: number;
+    default_operator?: string;
 }
 /**
  * Adds a search button to the specified container and setups necessary hotkeys to open the search modal.

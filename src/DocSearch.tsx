@@ -13,6 +13,8 @@ export interface DocSearchProps {
   // username: string;
   // password: string;
   // indexUid: string;
+  number_of_results?: number;
+  default_operator?: string;
   clientAgents?: string[];
   /**
    * An array of hotkeys to trigger the search modal.
@@ -49,7 +51,7 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
     if (selectedText) setInitialQuery(selectedText.toString());
     setIsOpen(true);
   };
-  const searchClient = useSearchClient({ clientAgents:[] });
+  const searchClient = useSearchClient({ clientAgents:[] },props);
 
   useHotKeys({
     isOpen,
