@@ -1,8 +1,13 @@
-# pizza-docsearch
+# pizza-searchbox
 
 A quick search UI component for pizza, forked from [here](https://github.com/tauri-apps/meilisearch-docsearch).
 
-Pizza-docsearch is part of the [Pizza](https://github.com/infinilabs/pizza) search engine project, visit [Pizza's site](http://pizza.rs) for more details.
+Pizza-searchbox is part of the [Pizza](https://github.com/infinilabs/pizza) search engine project, visit [Pizza's site](http://pizza.rs) for more details.
+
+# Features
+
+- Lightweight and fast, ~300KB after gzipped, powered by [INFINI Pizza for WebAssembly](https://github.com/infinilabs/pizza-wasm)
+- Support full featured query, compatible with [Lucene's Query Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html),  eg: `foo bar -baz "qux"`,  `(title: concept OR title: index) OR (NOT collection)`, etc.
 
 # Screenshot
 
