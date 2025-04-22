@@ -31,7 +31,7 @@ class PizzaWasm {
       //TODO, process fileContent to each object, and send to this.pizzaEngine.load
 
       // Load and index the file content using the Wasm engine
-      const isLoaded = this.pizzaEngine.load_json_objects_array(fileContent);
+      const isLoaded = await this.pizzaEngine.load_json_objects_array(fileContent);
 
       if (isLoaded) {
         console.log(`Load ${url} and indexed successfully.`);
