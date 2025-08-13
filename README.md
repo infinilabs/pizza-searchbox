@@ -2,7 +2,7 @@
 
 A quick search UI component for pizza, forked from [here](https://github.com/tauri-apps/meilisearch-docsearch).
 
-Pizza-searchbox is part of the [Pizza](https://github.com/infinilabs/pizza) search engine project, visit [Pizza's site](http://pizza.rs) for more details.
+Pizza-searchbox is part of the [Pizza](https://pizza.rs/docs/) search engine project, visit [Pizza's site](http://pizza.rs) for more details.
 
 # Features
 
@@ -15,7 +15,7 @@ Pizza-searchbox is part of the [Pizza](https://github.com/infinilabs/pizza) sear
 
 # Integrate with Hugo
 
-Checkout this [tutorial](https://www.reddit.com/r/infinilabs/comments/1f3rqsp/adding_search_functionality_to_a_hugo_static_site/) to learn how to integrate with Hugo.
+Checkout this [tutorial](https://blog.infinilabs.com/posts/2024/adding-searchbox-to-hugo-blog-site/) to learn how to integrate with Hugo.
 
 # Acknowledgement
 
